@@ -2,9 +2,14 @@ import React, { useState } from 'react'
 import { Route } from 'react-router-dom'
 
 // DayPicker
+// import { format } from 'date-fns'
+// import { DayPicker } from 'react-day-picker'
+// import 'react-day-picker/dist/style.css'
+
+// Date Picker
 import { format } from 'date-fns'
-import { DayPicker } from 'react-day-picker'
-import 'react-day-picker/dist/style.css'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 
 // NumberPicker
 import NumberPicker from 'react-widgets/NumberPicker'
@@ -18,7 +23,10 @@ const AddScore = ({ onAdd }) => {
     // const [day, setDay] = useState('')
 
     // DayPicker
-    const [day, setDay] = useState(new Date())
+    // const [day, setDay] = useState(new Date())
+
+    // Date Picker
+    const [day, setDay] = useState(null)
 
     // onSubmit Function
 
@@ -63,12 +71,18 @@ const AddScore = ({ onAdd }) => {
                 {/*Default without DayPicker
                 <input type='text' placeholder="Add Day" value={day} onChange={(e) => setDay(e.target.value)} /> 
                 */}
-                <DayPicker
+                {/* <DayPicker
                     className='day-picker'
                     mode='single'
                     selected={day}
                     onDayClick={setDay}
-                />
+                /> */}
+                <DatePicker
+                    className='day-picker'
+                    selected={day}
+                    onChange={date => setDay(date)}
+                    dayFormat='MM/dd/yy'
+                    />
             </div>
             <div className="form-control form-control-check">
                 <label>Set Favorite</label>

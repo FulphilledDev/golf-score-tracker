@@ -1,10 +1,10 @@
 {
   "scores": [
     {
-      "course": "Los Serranos Golf Club",
-      "text": 69,
-      "day": "2022-08-06T07:00:00.000Z",
-      "favorite": false,
+      "course": "Tracy Golf & CC",
+      "text": 64,
+      "day": "2022-09-03T07:00:00.000Z",
+      "favorite": true,
       "id": 1
     }
   ]
